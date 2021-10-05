@@ -4,7 +4,7 @@ npm-debug.*
 yarn-error.log
 web-build/
 web-report/
-packages/
+packages/**/*
 
 
 # macOS
