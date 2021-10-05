@@ -17,7 +17,7 @@ import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 import { createFirestoreInstance } from 'redux-firestore';
 
 
-import { reducers } from  '@cliqd/janet'
+import { reducers } from  '@hera/ares'
 
 import Loading from './Loading'
 

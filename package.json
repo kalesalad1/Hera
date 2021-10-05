@@ -9,10 +9,10 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "build:janet": "yarn workspace @Hera/janet build"
+    "build:ares": "yarn workspace @hera/ares build"
   },
   "dependencies": {
-    "@Hera/janet": "1.0.0",
+    "@hera/ares": "1.0.0",
     "@neverdull-agency/expo-unlimited-secure-store": "^1.0.10",
     "@react-native-async-storage/async-storage": "^1.15.5",
     "@react-native-community/netinfo": "^6.0.0",

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from '../../Styles/styles.js'
 import { Text, View, Button } from 'react-native';
-import { connect, actions } from '@cliqd/janet'
+import { connect, actions } from '@hera/ares'
 
 const Profile = ({ 
   

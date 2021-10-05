@@ -1,7 +1,7 @@
 
 
 import React, {Fragment} from "react"
-import { connect } from '@cliqd/janet'
+import { connect } from '@hera/ares'
 import LoggedInNav from "./LoggedInNav"
 import NotLoggedInNav from "./NotLoggedInNav"
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { connect, actions } from '@cliqd/janet'
+import { connect, actions } from '@hera/ares'
 import { View, Text,  TextInput, TouchableOpacity ,StyleSheet} from "react-native";
 
 import styles from '../Styles/styles'
