@@ -2,9 +2,13 @@ node_modules/**/*
 .expo/*
 npm-debug.*
 yarn-error.log
-web-build/
-web-report/
-packages/**/*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+packages/
 
 
 # macOS
