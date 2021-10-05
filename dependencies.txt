@@ -1,0 +1,9 @@
+@react-navigation/native
+react-native-gesture-handler
+react-native-screens
+react-navigation-stack
+firebase
+firebase-admin --save
+@react-native-firebase/app
+@react-native-firebase/firestore
+-g firebase-tools

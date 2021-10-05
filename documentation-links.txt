@@ -1,0 +1,3 @@
+https://reactnavigation.org/
+https://rnfirebase.io/reference
+https://reactnative.dev/docs/getting-started
