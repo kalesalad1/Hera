@@ -40,7 +40,7 @@ render(){
        
         <View style={styles.background}>
         <Text style={styles.title}>
-            Cliq'd
+            Hera
         </Text>
                  <TouchableOpacity onPress = {this.onPressloginButton}
             style={styles.loginContainter}>
