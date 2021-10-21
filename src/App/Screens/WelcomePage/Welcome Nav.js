@@ -19,7 +19,7 @@ const WelcomeScreen = ({ navigation }) =>{
     return (
         <View style={styles.background}>
             <Text style={styles.title}>
-                Cliq'd
+                Hera
             </Text>
             <Image 
                 source={require('../../../assets/Images/BackgroundImage.png')}
