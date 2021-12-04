@@ -24,14 +24,13 @@ import Loading from './Loading'
 
 
 export const fbConfig = {  
-  apiKey: "AIzaSyDpcwcJq1ymD-yiuoUMpWXaLoC4X3Isa80",
-  authDomain: "cliqd-19df5.firebaseapp.com",
-  authDomain: "hera-29dec.firebaseapp.com",
-  projectId: "hera-29dec",
-  storageBucket: "hera-29dec.appspot.com",
-  messagingSenderId: "455834664223",
-  appId: "1:455834664223:web:c4a95ee7ab8c769eb5442a",
-  measurementId: "G-Q71CTN3CHR"
+  apiKey: "AIzaSyC2f7eca_c7XnGFPf9sXjr7b30MttTtw8Q",
+  authDomain: "hera-ba139.firebaseapp.com",
+  projectId: "hera-ba139",
+  storageBucket: "hera-ba139.appspot.com",
+  messagingSenderId: "546466412881",
+  appId: "1:546466412881:web:2de18695ef8161006bbb70",
+  measurementId: "G-8XH68RG6MW"
 }
 
 export const rrfConfig = {
