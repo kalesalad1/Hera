@@ -24,14 +24,14 @@ import Loading from './Loading'
 
 
 export const fbConfig = {  
-apiKey: "AIzaSyAS_v-QVi_3v84VFOnkF4nJ0-g0Ye4OwSk",
-authDomain: "cliqd-19df5.firebaseapp.com",
-databaseURL: "https://cliqd-19df5-default-rtdb.firebaseio.com",
-projectId: "cliqd-19df5",
-storageBucket: "cliqd-19df5.appspot.com",
-messagingSenderId: "440529118050",
-appId: "1:440529118050:web:1788a1ed3477f50664423b",
-measurementId: "G-DB5HZKE6DP"}
+  apiKey: "AIzaSyC2f7eca_c7XnGFPf9sXjr7b30MttTtw8Q",
+  authDomain: "hera-ba139.firebaseapp.com",
+  projectId: "hera-ba139",
+  storageBucket: "hera-ba139.appspot.com",
+  messagingSenderId: "546466412881",
+  appId: "1:546466412881:web:2de18695ef8161006bbb70",
+  measurementId: "G-8XH68RG6MW"
+}
 
 export const rrfConfig = {
   userProfile: 'users',
