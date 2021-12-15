@@ -124,7 +124,9 @@ const LoginStyles = StyleSheet.create({
         height: 355.29,
         left: -104,
         top: 20,
-    }
+    },
+
+    
 });
 
 export default LoginStyles;

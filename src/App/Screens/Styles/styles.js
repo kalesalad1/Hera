@@ -96,6 +96,54 @@ const styles = StyleSheet.create({
         height: 355.29,
         left: -104,
         top: 20,
+    },
+
+
+    //New Reminder Styles
+    newReminderTitle: {
+        fontWeight: 'normal',
+        fontSize: 50,
+        lineHeight: 130,
+        textAlign: 'center',
+        color: "#05AFF2",
+        zIndex: 999
+
+    },
+    
+    modalToggle: {
+        marginTop: 30,
+        marginRight: 30,
+        borderWidth: 1,
+        borderColor: '#f2f2f2',
+        padding: 10,
+        borderRadius: 10,
+        alignSelf: 'flex-end'
+    },
+
+    modalClose:{
+        marginTop: 30,
+        marginRight: 30,
+        borderWidth: 1,
+        borderColor: '#f2f2f2',
+        padding: 10,
+        borderRadius: 10,
+        alignSelf: 'flex-end'
+    },
+
+    modalForm: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '25%'
+    },
+
+    inputStyle: {
+        backgroundColor: '#eeeeee',
+        alignContent: 'flex-start',
+        width: '75%',
+        height: '5%',
+        borderRadius: 10
     }
 });
 
