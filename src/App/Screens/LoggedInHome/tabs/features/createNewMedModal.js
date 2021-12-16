@@ -48,22 +48,16 @@ const loginScreen = ({
       
       </View>
       )
-      
-  
-
 }
 
 
 export default connect(
-    ({loginReducer}) => ({
-      email: loginReducer.email,
-      password: loginReducer.password,
+    ({medReducer}) => ({
+     date: medReducer.newMed.date,
     }),
 
      (dispatch, ownProps) => ({
-      setEmail: (email) => dispatch(actions.login.SetEmail(email)),
-      setPassword: (password) => dispatch(actions.login.SetPassword(password)),
-      logUserIn: () => dispatch(actions.user.LogUserIn()),
+      createNewMed: (email) => dispatch(actions.med.createNewMed(email)),
       ...ownProps
     }),
 

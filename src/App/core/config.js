@@ -1,12 +1,12 @@
 export const firebase = {  
-  apiKey: "AIzaSyAS_v-QVi_3v84VFOnkF4nJ0-g0Ye4OwSk",
-  authDomain: "cliqd-19df5.firebaseapp.com",
-  databaseURL: "https://cliqd-19df5-default-rtdb.firebaseio.com",
-  projectId: "cliqd-19df5",
-  storageBucket: "cliqd-19df5.appspot.com",
-  messagingSenderId: "440529118050",
-  appId: "1:440529118050:web:1788a1ed3477f50664423b",
-  measurementId: "G-DB5HZKE6DP"}
+  apiKey: "AIzaSyCiABP5Mrfh8wEI3X-CM6iBXtoZIT3MKb0",
+  authDomain: "hera-29e19.firebaseapp.com",
+  projectId: "hera-29e19",
+  storageBucket: "hera-29e19.appspot.com",
+  messagingSenderId: "1062712053445",
+  appId: "1:1062712053445:web:4cf45e0184227c6b146aac",
+  measurementId: "G-5X1BY57QLE"
+}
 
   export const rrfConfig = {
     userProfile: 'users',

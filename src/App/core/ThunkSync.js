@@ -24,18 +24,18 @@ import Loading from './Loading'
 
 
 export const fbConfig = {  
-  apiKey: "AIzaSyC2f7eca_c7XnGFPf9sXjr7b30MttTtw8Q",
-  authDomain: "hera-ba139.firebaseapp.com",
-  projectId: "hera-ba139",
-  storageBucket: "hera-ba139.appspot.com",
-  messagingSenderId: "546466412881",
-  appId: "1:546466412881:web:2de18695ef8161006bbb70",
-  measurementId: "G-8XH68RG6MW"
+  apiKey: "AIzaSyCiABP5Mrfh8wEI3X-CM6iBXtoZIT3MKb0",
+  authDomain: "hera-29e19.firebaseapp.com",
+  projectId: "hera-29e19",
+  storageBucket: "hera-29e19.appspot.com",
+  messagingSenderId: "1062712053445",
+  appId: "1:1062712053445:web:4cf45e0184227c6b146aac",
+  measurementId: "G-5X1BY57QLE"
 }
 
 export const rrfConfig = {
   userProfile: 'users',
-  useFirestoreForProfile: true // Store in Firestore instead of Real Time DB
+  useFirestoreForProfile: true 
 }
 
 
