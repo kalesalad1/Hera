@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons'; 
 import Feed from '../../Screens/LoggedInHome/tabs/HomePage.js'
 import Profile from '../../Screens/LoggedInHome/tabs/LogoutUser.js'
 
@@ -26,7 +27,7 @@ const Tabs = ({ navigation }) => {
           ),
         }}
       />
-
+ 
      
 
       <Tab.Screen
