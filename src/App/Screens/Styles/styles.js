@@ -4,16 +4,11 @@ const styles = StyleSheet.create({
 
     // Homescreen Styles
     toolBarIcons: {
-        flex: 1, 
-        justifyContent: 'center', 
-        alignItems: 'center',
-        backgroundColor: 'white' 
+     height:'100%',
+     width:'100%',
+    marginTop:'20%'
     },
-    CardIcons: {
-        justifyContent: 'center', 
-        alignItems: 'center',
-        backgroundColor: 'white' 
-    },
+   
 
     
     // Welcomescreen Styles

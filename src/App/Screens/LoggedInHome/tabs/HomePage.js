@@ -3,36 +3,57 @@ import styles from '../../Styles/styles.js'
 import { Text, View, Button } from 'react-native'
 import { connect, actions } from '@hera/ares'
 import CreateNewMedModal from './features/CreateNewMedModal'
-import { medicationsReducer } from '@hera/ares/dist/App/api.reducers';
+import ViewMedModal from './features/ViewMedModal'
+import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler';
 
 const HomePage = ({ 
   navigation ,
   currentUser,
   medications,
+  setSelectedMed,
 }) =>  {
 
-  console.log({currentUser})
+  console.log({medications})
   const [isCreateNewMedModalVisible, setCreateNewMedModalVisible] = React.useState(false)
-
-
+  const [isViewModalVisible, setViewModalVisible] = React.useState(false)
+  
+  const handleView = (medication) => {
+    console.log('hello')
+    setSelectedMed(medication)
+           setViewModalVisible(true)
+  }
     return (
     
       <View style={styles.toolBarIcons}>
-        <Text>{`Welcome! ${currentUser.firstname} ${currentUser.lastname}`}</Text>
-        {medications.length > 0 && 
-        medications.map(medication => {
-          <View style = {{borderWidth:1, borderColor:'black', borderRadius:5}}>
-            <Text>{medication.name}</Text>
-            <Text>{medication.takeFrequency}</Text>
-            <Text>{medication.atTimesToTake}</Text>
+        <ScrollView>
+        <Text>{`Welcome! ${currentUser.firstname}`}</Text>
+        
+        {medications.map((medication,i) => (
+         <TouchableHighlight 
+         style = {{alignSelf:'center',borderWidth:1, borderColor:'black', borderRadius:5, width:'80%'}}
+         onPress = {()=> handleView(medications[i]) }>
+         <View >
+            <Text>{medications[i].name}</Text>
+            <Text>{medications[i].takeFrequency}</Text>
+            <Text>{medications[i].atTimesToTake}</Text>
           </View>
-        })
-        }
+          </TouchableHighlight>
+        ))}
+        
         <Button title="Add a new medication" onPress={() => {setCreateNewMedModalVisible(true)}}/>
-           <CreateNewMedModal
+        </ScrollView>
+     
+      <CreateNewMedModal
       isCreateNewMedModalVisible = {isCreateNewMedModalVisible}
       setCreateNewMedModalVisible = {setCreateNewMedModalVisible}
       ></CreateNewMedModal>
+
+    <ViewMedModal
+      isViewModalVisible = {isViewModalVisible}
+      setViewModalVisible = {setViewModalVisible}
+      ></ViewMedModal>
+
+
       </View>
       
    
@@ -47,7 +68,7 @@ const HomePage = ({
     }),
 
      (dispatch, ownProps) => ({
-   
+      setSelectedMed: (medication) => dispatch(actions.medications.SetSelectedMed(medication)),
       ...ownProps
     }),
   )(HomePage)

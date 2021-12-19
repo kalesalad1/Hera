@@ -6,70 +6,55 @@ import { Modal } from 'react-native-paper'
 
 const ViewNewMedModal = ({
     selectedMedication,
-    // setNewMedTimes,
-    // setNewMedFrequency,
-    // atTimesToTake,
-    // name,
-    // takeFrequency,
-    // createNewMed,
-    // isCreateNewMedModalVisible,
-    // setCreateNewMedModalVisible,
+    isViewModalVisible,
+    setViewModalVisible,
+    deleteMedication,
+
 }) => {
   
   const validate = () => {
-    createNewMed()
-    setCreateNewMedModalVisible(false)
+    deleteMedication(selectedMedication.name)
+    setViewModalVisible(false)
   }
 
-
+console.log(isViewModalVisible)
 
   return( 
       <Modal
-      visible={isCreateNewMedModalVisible}
+      visible={isViewModalVisible}
       animationType="slide"
       >
       <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'90%', paddingTop:200, borderRadius:10}}>
-      {/* <Text></Text>
+      
       <Text>Medication Name </Text>
-          <TextInput 
-             
-              placeholder = "name"
-              onChangeText = {(name) => setNewMedName(name)}
-              value = {name}
-              />
+      <Text>{selectedMedication.name}</Text>
+      
           <Text>Medication frequency per day</Text>
-            <TextInput 
+          <Text>{selectedMedication.takeFrequency}</Text>
             
-                placeholder = "frequency per day"
-                onChangeText = {(takeFrequency) => setNewMedFrequency(takeFrequency)}
-                value = {takeFrequency}
-                />
               <Text>Medication time</Text>
-                <TextInput 
-                
-                    placeholder = "Times"
-                    onChangeText = {(atTimesToTake) => setNewMedTimes(atTimesToTake)}
-                    value = {atTimesToTake}
-                    />
-                <TouchableOpacity style = {{width:100, height:40, backgroundColor:'green', alignItems:'center'}}
+              <Text>{selectedMedication.atTimesToTake}</Text>
+
+             
+                <TouchableOpacity style = {{width:100, height:40, backgroundColor:'red', alignItems:'center'}}
                 onPress={() => {
                   validate()
               
                 }}
                 >
                   <Text>
-                      Add new Medication
+                     delete medication
                   </Text>
           </TouchableOpacity>
-          <TouchableOpacity style = {{width:100, height:40, backgroundColor:'red', alignItems:'center'}}
+          <TouchableOpacity style = {{width:100, height:40, backgroundColor:'green', alignItems:'center'}}
           onPress={() => {
-            setCreateNewMedModalVisible(false)
+            setViewModalVisible(false)
           }}
           >
                   <Text>
                      cancel
                   </Text>
-          </TouchableOpacity> */}
+          </TouchableOpacity>
       </View>
       </Modal>    
       )
@@ -84,8 +69,7 @@ export default connect(
 
      (dispatch, ownProps) => ({
       deleteMedication: (name) => dispatch(actions.medications.DeleteMedication(name)),
-     
       ...ownProps
     }),
 
-  )(CreateNewMedModal)
+  )(ViewNewMedModal)
