@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#eeeeee',
         alignContent: 'flex-start',
         width: '75%',
-        height: '5%',
+        height: '20%',
         borderRadius: 10
     }
 });

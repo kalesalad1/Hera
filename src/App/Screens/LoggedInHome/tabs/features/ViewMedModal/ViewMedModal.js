@@ -26,7 +26,9 @@ console.log(isViewModalVisible)
       >
       <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'90%', paddingTop:200, borderRadius:10}}>
       
-      <Text>Medication Name </Text>
+    {selectedMedication && (
+      <View>
+ <Text>Medication Name </Text>
       <Text>{selectedMedication.name}</Text>
       
           <Text>Medication frequency per day</Text>
@@ -56,6 +58,10 @@ console.log(isViewModalVisible)
                   </Text>
           </TouchableOpacity>
       </View>
+      
+
+    )}
+     </View>
       </Modal>    
       )
 }
