@@ -11,23 +11,26 @@ const HomePage = ({
   currentUser,
   medications,
   setSelectedMed,
+  GetMedications,
 }) =>  {
 
-  console.log({medications})
+  React.useEffect(()=>{
+    GetMedications()
+  },[])
   const [isCreateNewMedModalVisible, setCreateNewMedModalVisible] = React.useState(false)
   const [isViewModalVisible, setViewModalVisible] = React.useState(false)
   
   const handleView = (medication) => {
-    console.log('hello')
     setSelectedMed(medication)
-           setViewModalVisible(true)
+    setViewModalVisible(true)
   }
     return (
     
       <View style={styles.toolBarIcons}>
         <ScrollView>
         <Text>{`Welcome! ${currentUser.firstname}`}</Text>
-        
+        {!!medications && medications.length>0 && (
+          <View>
         {medications.map((medication,i) => (
          <TouchableHighlight 
          style = {{alignSelf:'center',borderWidth:1, borderColor:'black', borderRadius:5, width:'80%'}}
@@ -39,7 +42,8 @@ const HomePage = ({
           </View>
           </TouchableHighlight>
         ))}
-        
+        </View>
+        )}
         <Button title="Add a new medication" onPress={() => {setCreateNewMedModalVisible(true)}}/>
         </ScrollView>
      
@@ -69,6 +73,7 @@ const HomePage = ({
 
      (dispatch, ownProps) => ({
       setSelectedMed: (medication) => dispatch(actions.medications.SetSelectedMed(medication)),
-      ...ownProps
+      GetMedications: () => dispatch (actions.medications.GetMedications()),
+      ...ownProps,
     }),
   )(HomePage)
