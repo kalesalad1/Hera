@@ -25,20 +25,29 @@ const HomePage = ({
     setViewModalVisible(true)
   }
     return (
-    
       <View style={styles.toolBarIcons}>
         <ScrollView>
         <Text>{`Welcome! ${currentUser.firstname}`}</Text>
         {!!medications && medications.length>0 && (
           <View>
         {medications.map((medication,i) => (
+       
          <TouchableHighlight 
+         key = {i}
          style = {{alignSelf:'center',borderWidth:1, borderColor:'black', borderRadius:5, width:'80%'}}
          onPress = {()=> handleView(medications[i]) }>
          <View >
             <Text>{medications[i].name}</Text>
+            <View>
+            {medication.days.map(day => (
+                <Text>{day}</Text>
+            ))}
+            </View>
+            {medication.atTimesToTake.map(time => (
+                <Text>{time}</Text>    
+            ))}
+           
             <Text>{medications[i].takeFrequency}</Text>
-            <Text>{medications[i].atTimesToTake}</Text>
           </View>
           </TouchableHighlight>
         ))}

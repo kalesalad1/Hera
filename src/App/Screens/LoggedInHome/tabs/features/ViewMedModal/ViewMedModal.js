@@ -17,25 +17,36 @@ const ViewNewMedModal = ({
     setViewModalVisible(false)
   }
 
-console.log(isViewModalVisible)
-
   return( 
       <Modal
       visible={isViewModalVisible}
       animationType="slide"
+      onDismiss={() => setViewModalVisible(false)
       >
-      <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'90%', paddingTop:200, borderRadius:10}}>
+      <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'90%', paddingTop:20, borderRadius:10}}>
       
     {selectedMedication && (
       <View>
  <Text>Medication Name </Text>
       <Text>{selectedMedication.name}</Text>
       
+      <Text>Medication days</Text>
+          <View>
+            {selectedMedication.days.map(day => (
+                <Text>{day}</Text>
+            ))}
+            </View>
+          
+      
+      <Text>Medication time</Text>
+      {selectedMedication.atTimesToTake.map(time => (
+                <Text>{time}</Text>    
+            ))}
+      
           <Text>Medication frequency per day</Text>
           <Text>{selectedMedication.takeFrequency}</Text>
             
-              <Text>Medication time</Text>
-              <Text>{selectedMedication.atTimesToTake}</Text>
+         
 
              
                 <TouchableOpacity style = {{width:100, height:40, backgroundColor:'red', alignItems:'center'}}
