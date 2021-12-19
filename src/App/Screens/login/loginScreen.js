@@ -10,10 +10,7 @@ const loginScreen = ({
   setPassword,
   email,
   password,
-  currentUser,
-  myUser
 }) => {
-  console.log({data:currentUser, type: typeof currentUser})
   
   const validate = () => {
     logUserIn()
@@ -51,17 +48,13 @@ const loginScreen = ({
       
       </View>
       )
-      
-  
-
 }
 
 
 export default connect(
-    ({loginReducer, userReducer}) => ({
+    ({loginReducer}) => ({
       email: loginReducer.email,
       password: loginReducer.password,
-      currentUser: userReducer.currentUser,
     }),
 
      (dispatch, ownProps) => ({

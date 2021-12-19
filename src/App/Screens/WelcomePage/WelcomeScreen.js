@@ -12,18 +12,7 @@ export class WelcomeScreen extends Component {
       this.onPressloginButton = this.onPressloginButton.bind(this);
       this.onPressSignUpButton = this.onPressSignUpButton.bind(this);
   
-    // let {fontFamily, error} = useFonts({
-    //     BerkshireSwash_400Regular
-    // })
-
-    // const [loaded] = useFonts({
-    //     Shrikhand: require('.\fonts\Shrikhand-Regular.ttf'),
-    // });
-
-    // if (!loaded) {
-    //     return null;
-    // }
-}
+  }
        
 onPressloginButton() {
     const { navigate } = this.props.navigation;
