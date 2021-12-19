@@ -21,7 +21,7 @@ const ViewNewMedModal = ({
       <Modal
       visible={isViewModalVisible}
       animationType="slide"
-      onDismiss={() => setViewModalVisible(false)
+      onDismiss={() => setViewModalVisible(false)}
       >
       <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'90%', paddingTop:20, borderRadius:10}}>
       
