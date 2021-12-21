@@ -23,35 +23,37 @@ const signUp = ({
 
 
   return(     
-      <View style = {{paddingTop:200}}>
+      <View style = {{paddingTop:150}}>
+      <Text style={styles.heading2}>Create your Account</Text>
+
       <Text></Text>
-      <Text>First Name</Text>
+      <Text style={styles.nameText}>FIRST NAME</Text>
               <TextInput 
-              style = {styles.inputStyle}
-              placeholder = "email"
+              style = {styles.inputStyle1}
+              placeholder = "     Name"
               onChangeText = {(firstName) => setFirstName(firstName)}
               value = {firstName}
               />
           
-          <Text>Last Name</Text>
+          <Text style={styles.nameText}>LAST NAME</Text>
               <TextInput 
-              style = {styles.inputStyle}
-              placeholder = "Password"
+              style = {styles.inputStyle1}
+              placeholder = "     Last Name"
               onChangeText = {(lastName) => setLastName(lastName)}
               value = {lastName}
               />
-          <Text>Email</Text>
+          <Text style={styles.emailText}>EMAIL</Text>
               <TextInput 
-              style = {styles.inputStyle}
-              placeholder = "email"
+              style = {styles.inputStyle1}
+              placeholder = "     Email"
               onChangeText = {(email) => setEmail(email)}
               value = {email}
               />
           
-          <Text>Password</Text>
+          <Text style={styles.passText}>PASSWORD</Text>
           <TextInput 
-              style = {styles.inputStyle}
-              placeholder = "Password"
+              style = {styles.inputStyle1}
+              placeholder = "     Password"
               onChangeText = {(password) => setPassword(password)}
               value = {password}
               />
@@ -60,9 +62,9 @@ const signUp = ({
             validate()
          
           }}
-          style={styles.loginContainter}>
-                  <Text style={styles.loginText}>
-                      Login
+          style={styles.signupContainter1}>
+                  <Text style={styles.signupText}>
+                      SIGN UP
                   </Text>
           </TouchableOpacity>
       
