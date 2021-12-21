@@ -23,12 +23,13 @@ setCurrentUser,
     
       <View style={styles.toolBarIcons}>
 
+        <Text style={styles.heading3}>Profile</Text>
+
         <Button
           onPress={() => LogoutUser()}
           title="Logout"
-          color="#841584"
+          color="#023E8A"
         />
-        <Text>Profile!</Text>
       </View>
     );
   }
