@@ -14,7 +14,7 @@ const Tabs = ({ navigation }) => {
     <Tab.Navigator
       initialRouteName="Feed"
       tabBarOptions={{
-        activeTintColor: '#e91e63',
+        activeTintColor: '#023E8A',
       }}>
       
       <Tab.Screen
