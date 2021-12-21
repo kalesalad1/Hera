@@ -3,6 +3,8 @@ import styles from '../../Styles/styles.js'
 import { Text, View, Button } from 'react-native';
 import { connect, actions } from '@hera/ares'
 
+//<Text style={styles.heading3}>Profile</Text>
+
 const Profile = ({ 
   
   navigation ,
@@ -23,13 +25,15 @@ setCurrentUser,
     
       <View style={styles.toolBarIcons}>
 
-        <Text style={styles.heading3}>Profile</Text>
-
         <Button
           onPress={() => LogoutUser()}
           title="Logout"
           color="#023E8A"
         />
+
+        <Text>Profile</Text>
+
+        
       </View>
     );
   }
