@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from '../../Styles/styles.js'
-import { Text, View, Button, Image} from 'react-native';
+import { Text, View, Button, Image, TouchableOpacity} from 'react-native';
 import { connect, actions } from '@hera/ares'
 
 //<Text style={styles.heading3}>Profile</Text>
@@ -40,8 +40,18 @@ setCurrentUser,
         />
         </View>
 
-        <View style = {{paddingTop:100}}>
+        <View style = {{paddingTop:300}}>
         </View>
+
+        <TouchableOpacity style={styles.settingsContainter}>
+            <Text style={styles.bottonText}>Settings</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.helpContainter}>
+            <Text style={styles.bottonText}>Help</Text>
+        </TouchableOpacity>
+
+        
 
         <Button
           onPress={() => LogoutUser()}
