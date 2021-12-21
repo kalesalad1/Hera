@@ -27,46 +27,44 @@ const ViewNewMedModal = ({
       
     {selectedMedication && (
       <View>
- <Text>Medication Name </Text>
-      <Text>{selectedMedication.name}</Text>
+      <Text style={styles.subHeading}>Medication Name</Text>
+      <Text style={styles.text}>{selectedMedication.name}</Text>
       
-      <Text>Medication days</Text>
+      <Text style={styles.subHeading}>Recurrence</Text>
           <View>
             {selectedMedication.days.map(day => (
-                <Text>{day}</Text>
+                <Text style={styles.text}>{day}</Text>
             ))}
             </View>
           
       
-      <Text>Medication time</Text>
+      <Text style={styles.subHeading}>Medication Time</Text>
       {selectedMedication.atTimesToTake.map(time => (
-                <Text>{time}</Text>    
+                <Text style={styles.text}>{time}</Text>   
             ))}
       
-          <Text>Medication frequency per day</Text>
-          <Text>{selectedMedication.takeFrequency}</Text>
+            <Text style={styles.subHeading}>Frequency</Text>
+          <Text style={styles.text}>{selectedMedication.takeFrequency}</Text>
             
          
 
              
-                <TouchableOpacity style = {{width:100, height:40, backgroundColor:'red', alignItems:'center'}}
+                <TouchableOpacity style = {{left:45, width:100, height:40, backgroundColor:'#023E8A', alignItems:'center', borderRadius: 100, justifyContent: 'center'}}
                 onPress={() => {
                   validate()
               
                 }}
+                
                 >
-                  <Text>
-                     delete medication
-                  </Text>
+                <Text style={styles.bottonText}>DELETE</Text>
+                 
           </TouchableOpacity>
-          <TouchableOpacity style = {{width:100, height:40, backgroundColor:'green', alignItems:'center'}}
+          <TouchableOpacity style = {{left:45, top: 10, width:100, height:40, backgroundColor:"#A1A4B2", alignItems:'center', borderRadius: 100, justifyContent: 'center'}}
           onPress={() => {
             setViewModalVisible(false)
           }}
           >
-                  <Text>
-                     cancel
-                  </Text>
+                  <Text style={styles.bottonText}>CANCEL</Text>
           </TouchableOpacity>
       </View>
       
@@ -90,3 +88,34 @@ export default connect(
     }),
 
   )(ViewNewMedModal)
+
+    
+const styles = StyleSheet.create({
+  subHeading: {
+      fontFamily: 'HelveticaNeue',
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#A1A4B2',
+      lineHeight: 30,
+  },
+  text: {
+      textAlign: 'left',
+      marginTop: 5,
+      marginBottom: 5,
+      fontFamily: 'HelveticaNeue',
+      fontSize: 16,
+      fontWeight: '700',
+      lineHeight: 16,
+      color: 'black',
+      left: 20,
+  },
+  bottonText: {
+    color: '#FFFFFF',
+    textAlign: 'center',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 16,
+    fontFamily: 'HelveticaNeue',
+},
+
+});

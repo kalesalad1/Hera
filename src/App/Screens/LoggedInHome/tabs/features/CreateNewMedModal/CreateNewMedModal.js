@@ -84,6 +84,7 @@ const CreateNewMedModal = ({
               placeholder = "   Name"
               onChangeText = {(name) => setNewMedName(name)}
               value = {name}
+              style={styles.text}
               />
             
             <Text style={styles.subHeading}>Recurrence</Text>
@@ -104,6 +105,7 @@ const CreateNewMedModal = ({
                     placeholder = "     frequency per day"
                     onChangeText = {(takeFrequency) => setNewMedFrequency(takeFrequency)}
                     value = {takeFrequency}
+                    style={styles.text}
                   />
             
                 
@@ -172,13 +174,12 @@ const styles = StyleSheet.create({
   },
   text: {
       textAlign: 'left',
-      marginTop: 20,
-      marginBottom: 5,
+      marginTop: 5,
       fontFamily: 'HelveticaNeue',
-      fontSize: 14,
+      fontSize: 16,
       fontWeight: '700',
-      lineHeight: 30,
-      color: '#A1A4B2',
+      lineHeight: 16,
+      color: 'black',
       left: 20,
   },
   bottonText: {

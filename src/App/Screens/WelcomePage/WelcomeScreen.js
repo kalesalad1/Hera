@@ -36,7 +36,7 @@ render(){
  
         <View style={styles.top}>
           <Text style={styles.subHeading}>
-            Welcome to
+               Welcome to
           </Text>
           <Text style={styles.heading}>
             HERA

@@ -227,6 +227,20 @@ const styles = StyleSheet.create({
         fontFamily: 'HelveticaNeue',
         zIndex: 999,
     },
+    heading4: {
+        position: 'absolute',
+        width: 322,
+        height: 116,
+        left: 35,
+        //top: 20,
+        fontWeight: 'bold',
+        fontSize: 45,
+        lineHeight: 45,
+        textAlign: 'center',
+        color: '#F1D661',
+        fontFamily: 'HelveticaNeue',
+        zIndex: 999,
+    },
     subHeading: {
         fontFamily: 'HelveticaNeue',
         fontSize: 30,
@@ -240,6 +254,7 @@ const styles = StyleSheet.create({
         width: 322,
         height: 116,
         top: 100,
+        left: 45,
     },
     subHeading1: {
         fontFamily: 'HelveticaNeue',
@@ -299,6 +314,11 @@ const styles = StyleSheet.create({
         color: '#A1A4B2',
         left: 20,
     },
+    infoBox: {
+        width: 150,
+        height: 225,
+        left: 130,
+      },
 });
 
 export default styles;
