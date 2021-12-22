@@ -35,7 +35,13 @@ const CreateNewMedModal = ({
     { id: 'SATURDAY', label: 'S' },
     { id: 'SUNDAY', label: 'Su' },
   ];
-
+  
+ /* const displayDays = [
+    { id: 'DAILY', label: 'Daily' },
+    { id: 'WEEKLY', label: 'Weekly' },
+    { id: 'MONTHLY', label: 'Monthly' },
+  ];
+  */
 
   const displayTimes = [
     { id: 1, label: '12 PM' },

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { connect, actions } from '@hera/ares'
 import { View, Text,  TextInput, TouchableOpacity ,StyleSheet} from "react-native";
 import { Modal } from 'react-native-paper'
+import { ScrollView } from "react-native-gesture-handler";
 
 
 const ViewNewMedModal = ({
@@ -23,10 +24,12 @@ const ViewNewMedModal = ({
       animationType="slide"
       onDismiss={() => setViewModalVisible(false)}
       >
+        <ScrollView>
       <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'90%', paddingTop:20, borderRadius:10}}>
       
     {selectedMedication && (
       <View>
+
       <Text style={styles.subHeading}>Medication Name</Text>
       <Text style={styles.text}>{selectedMedication.name}</Text>
       
@@ -44,8 +47,7 @@ const ViewNewMedModal = ({
             ))}
       
             <Text style={styles.subHeading}>Frequency</Text>
-          <Text style={styles.text}>{selectedMedication.takeFrequency}</Text>
-            
+          <Text style={styles.text}>{selectedMedication.takeFrequency}</Text>          
          
 
              
@@ -71,6 +73,7 @@ const ViewNewMedModal = ({
 
     )}
      </View>
+     </ScrollView>
       </Modal>    
       )
 }

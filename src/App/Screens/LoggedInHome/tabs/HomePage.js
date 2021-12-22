@@ -37,11 +37,12 @@ const HomePage = ({
         <Text style={styles.heading3}>{`Welcome! ${currentUser.firstname}`}</Text>
         
         <View style = {{paddingTop:100}}>
+          <Text style={styles.subHeading}>Today's Reminders</Text>
         </View>
 
-        <Text style={styles.subHeading}>Today's Reminders</Text>
 
-        <View style = {{paddingTop:50}}>
+        <View style = {{paddingTop:50, flex: 'column'}}>
+          <Button style={{width: '100%'}} title="Add new medication" width = "100%" color = "#A1A4B2" onPress={() => {setCreateNewMedModalVisible(true)}}/>
         </View>
 
         {!!medications && medications.length>0 && (
@@ -69,7 +70,6 @@ const HomePage = ({
         ))}
         </View>
         )}
-        <Button title="Add new medication" color = "#A1A4B2" onPress={() => {setCreateNewMedModalVisible(true)}}/>
         </ScrollView>
      
       <CreateNewMedModal
