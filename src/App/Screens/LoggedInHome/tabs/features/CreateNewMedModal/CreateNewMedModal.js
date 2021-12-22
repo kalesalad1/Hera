@@ -4,6 +4,7 @@ import { View, Text,  TextInput, TouchableOpacity ,StyleSheet} from "react-nativ
 import { TagSelect } from "react-native-tag-select";
 import { Modal } from 'react-native-paper'
 import { ScrollView } from "react-native-gesture-handler";
+//import {styles} from './styles';
 
 
 const CreateNewMedModal = ({
@@ -26,44 +27,54 @@ const CreateNewMedModal = ({
   }
 
   const displayDays = [
-    { id: 'MONDAY', label: 'Monday' },
-    { id: 'TUESDAY', label: 'Tuesday' },
-    { id: 'WEDNESDAY', label: 'Wednesday' },
-    { id: 'THURSDAY', label: 'Thursday' },
-    { id: 'FRIDAY', label: 'Friday' },
-    { id: 'SATURDAY', label: 'Saturday' },
-    { id: 'SUNDAY', label: 'Sunday' },
+    { id: 'MONDAY', label: 'M' },
+    { id: 'TUESDAY', label: 'T' },
+    { id: 'WEDNESDAY', label: 'W' },
+    { id: 'THURSDAY', label: 'Th' },
+    { id: 'FRIDAY', label: 'F' },
+    { id: 'SATURDAY', label: 'S' },
+    { id: 'SUNDAY', label: 'Su' },
   ];
-
+  
+ /* const displayDays = [
+    { id: 'DAILY', label: 'Daily' },
+    { id: 'WEEKLY', label: 'Weekly' },
+    { id: 'MONTHLY', label: 'Monthly' },
+  ];
+  */
 
   const displayTimes = [
-    { id: 1, label: '12pm' },
-    { id: 2, label: '1am' },
-    { id: 3, label: '2am' },
-    { id: 4, label: '3am' },
-    { id: 5, label: '4am' },
-    { id: 6, label: '5am' },
-    { id: 7, label: '6am' },
-    { id: 8, label: '7am' },
-    { id: 9, label: '8am' },
-    { id: 10, label: '9am' },
-    { id: 11, label: '10am' },
-    { id: 12, label: '11am' },
-    { id: 13, label: '12pm' },
-    { id: 14, label: '1pm' },
-    { id: 15, label: '2pm' },
-    { id: 16, label: '3pm' },
-    { id: 17, label: '4pm' },
-    { id: 18, label: '5pm' },
-    { id: 19, label: '6pm' },
-    { id: 20, label: '7pm' },
-    { id: 21, label: '8pm' },
-    { id: 22, label: '9pm' },
-    { id: 23, label: '10pm' },
-    { id: 24, label: '11pm' },
+    { id: 1, label: '12 PM' },
+    { id: 2, label: '1 AM' },
+    { id: 3, label: '2 AM' },
+    { id: 4, label: '3 AM' },
+    { id: 5, label: '4 AM' },
+    { id: 6, label: '5 AM' },
+    { id: 7, label: '6 AM' },
+    { id: 8, label: '7 AM' },
+    { id: 9, label: '8 AM' },
+    { id: 10, label: '9 AM' },
+    { id: 11, label: '10 AM' },
+    { id: 12, label: '11 AM' },
+    { id: 13, label: '12 AM' },
+    { id: 14, label: '1 PM' },
+    { id: 15, label: '2 PM' },
+    { id: 16, label: '3 PM' },
+    { id: 17, label: '4 PM' },
+    { id: 18, label: '5 PM' },
+    { id: 19, label: '6 PM' },
+    { id: 20, label: '7 PM' },
+    { id: 21, label: '8 PM' },
+    { id: 22, label: '9 PM' },
+    { id: 23, label: '10 PM' },
+    { id: 24, label: '11 PM' },
    
   ];
 
+  //<Text>Medication Name </Text>
+  //<Text>Medication days</Text>
+  //<Text>Medication frequency per day</Text>
+  //<Text>Medication time</Text>
 
   return( 
       <Modal
@@ -71,16 +82,18 @@ const CreateNewMedModal = ({
       animationType="slide"
       onDismiss={() => setCreateNewMedModalVisible(false)}
       >
-        <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'90%', paddingTop:20, borderRadius:10}}>
+        <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'95%', paddingTop:20, borderRadius:10}}>
         <ScrollView>
-            <Text>Medication Name </Text>
+            <Text style={styles.subHeading}>Medication Name</Text>
+            
             <TextInput  
-              placeholder = "name"
+              placeholder = "   Name"
               onChangeText = {(name) => setNewMedName(name)}
               value = {name}
+              style={styles.text}
               />
             
-            <Text>Medication days</Text>
+            <Text style={styles.subHeading}>Recurrence</Text>
             <TagSelect
                   keyAttr="id"
                   labelAttr="label"
@@ -88,18 +101,22 @@ const CreateNewMedModal = ({
                   onItemPress={selection => {
                     setDays([...days, selection.label])
                   }}
-                  containerStyle={{ paddingBottom: 15 }}
+                  containerStyle={{ paddingBottom: 0.5 }}
                 />
           
-                <Text>Medication frequency per day</Text>
+                <Text style={styles.subHeading}>Frequency</Text>
+                
                 <TextInput 
                     keyboardType = 'numeric'
-                    placeholder = "frequency per day"
+                    placeholder = "     frequency per day"
                     onChangeText = {(takeFrequency) => setNewMedFrequency(takeFrequency)}
                     value = {takeFrequency}
+                    style={styles.text}
                   />
             
-                <Text>Medication time</Text>
+                
+                <Text style={styles.subHeading}>What time would you like to take the medication?</Text>
+                <Text></Text>
                 <TagSelect
                     keyAttr="id"
                     labelAttr="label"
@@ -109,23 +126,21 @@ const CreateNewMedModal = ({
                     }}
                     containerStyle={{ paddingBottom: 15 }}
                   />
-                  <TouchableOpacity style = {{width:100, height:40, backgroundColor:'green', alignItems:'center'}}
+                  <TouchableOpacity style = {{left:120, width:100, height:40, backgroundColor:'#023E8A', alignItems:'center', borderRadius: 100, justifyContent: 'center'}}
                   onPress={() => {
                     validate()
                 
                   }}
                   >
-                
-                <Text>Add new Medication</Text>
+                <Text style={styles.bottonText}>CREATE</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style = {{width:100, height:40, backgroundColor:'red', alignItems:'center'}}
+                <TouchableOpacity style = {{left:120, top: 10, width:100, height:40, backgroundColor:"#A1A4B2", alignItems:'center', borderRadius: 100, justifyContent: 'center'}}
                 onPress={() => {
                   setCreateNewMedModalVisible(false)
                 }}
                 >
-                  <Text>
-                    cancel
-                  </Text>
+                <Text style={styles.bottonText}>CANCEL</Text>
+
                 </TouchableOpacity>
                 </ScrollView>
             </View>
@@ -153,3 +168,33 @@ export default connect(
     }),
 
   )(CreateNewMedModal)
+
+  
+const styles = StyleSheet.create({
+  subHeading: {
+      fontFamily: 'HelveticaNeue',
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#A1A4B2',
+      lineHeight: 30,
+  },
+  text: {
+      textAlign: 'left',
+      marginTop: 5,
+      fontFamily: 'HelveticaNeue',
+      fontSize: 16,
+      fontWeight: '700',
+      lineHeight: 16,
+      color: 'black',
+      left: 20,
+  },
+  bottonText: {
+    color: '#FFFFFF',
+    textAlign: 'center',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 16,
+    fontFamily: 'HelveticaNeue',
+},
+
+});

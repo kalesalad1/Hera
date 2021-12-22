@@ -23,18 +23,30 @@ onPressSignUpButton() {
        navigate("SignUp")
 }
    
+/*
+<Text style={styles.title}>
+            Hera
+</Text>
+*/
   
 render(){
     return (
        
         <View style={styles.background}>
-        <Text style={styles.title}>
-            Hera
-        </Text>
-                 <TouchableOpacity onPress = {this.onPressloginButton}
+ 
+        <View style={styles.top}>
+          <Text style={styles.subHeading}>
+               Welcome to
+          </Text>
+          <Text style={styles.heading}>
+            HERA
+          </Text>
+        </View>
+
+        <TouchableOpacity onPress = {this.onPressloginButton}
             style={styles.loginContainter}>
             <Text style={styles.loginText}>
-                Login
+                LOGIN
             </Text>
         </TouchableOpacity>
       
@@ -42,7 +54,7 @@ render(){
         <TouchableOpacity onPress = {this.onPressSignUpButton}
             style={styles.signupContainter}>
             <Text style={styles.signupText}>
-                Sign Up
+                SIGN UP
             </Text>
         </TouchableOpacity>
     </View>

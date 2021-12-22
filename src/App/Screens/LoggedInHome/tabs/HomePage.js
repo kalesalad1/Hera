@@ -24,36 +24,52 @@ const HomePage = ({
     setSelectedMed(medication)
     setViewModalVisible(true)
   }
+
+  //<Text>{`Welcome! ${currentUser.firstname}`}</Text>
+  //<Text>{medications[i].name}</Text>
+  //<Text>{day}</Text>
+  //<Text>{time}</Text>  
+  //<Text>{medications[i].takeFrequency}</Text>
+
     return (
       <View style={styles.toolBarIcons}>
         <ScrollView>
-        <Text>{`Welcome! ${currentUser.firstname}`}</Text>
+        <Text style={styles.heading3}>{`Welcome! ${currentUser.firstname}`}</Text>
+        
+        <View style = {{paddingTop:100}}>
+          <Text style={styles.subHeading}>Today's Reminders</Text>
+        </View>
+
+
+        <View style = {{paddingTop:50, flex: 'column'}}>
+          <Button style={{width: '100%'}} title="Add new medication" width = "100%" color = "#A1A4B2" onPress={() => {setCreateNewMedModalVisible(true)}}/>
+        </View>
+
         {!!medications && medications.length>0 && (
           <View>
         {medications.map((medication,i) => (
        
          <TouchableHighlight 
          key = {i}
-         style = {{alignSelf:'center',borderWidth:1, borderColor:'black', borderRadius:5, width:'80%'}}
+         style = {{alignSelf:'center',borderWidth:1, borderColor:'black', borderRadius:15, width:'80%', marginTop: 10, backgroundColor: '#023E8A'}}
          onPress = {()=> handleView(medications[i]) }>
          <View >
-            <Text>{medications[i].name}</Text>
+            <Text style={styles.subHeading3}>{medications[i].name}</Text>
             <View>
             {medication.days.map(day => (
-                <Text>{day}</Text>
+                <Text style={styles.subHeading1}>{day}</Text>
             ))}
             </View>
             {medication.atTimesToTake.map(time => (
-                <Text>{time}</Text>    
+                <Text style={styles.subHeading1}>{`Time: ${time}`}</Text>
             ))}
            
-            <Text>{medications[i].takeFrequency}</Text>
+            <Text style={styles.subHeading1}>{`Frequency: ${medications[i].takeFrequency}`}</Text>
           </View>
           </TouchableHighlight>
         ))}
         </View>
         )}
-        <Button title="Add a new medication" onPress={() => {setCreateNewMedModalVisible(true)}}/>
         </ScrollView>
      
       <CreateNewMedModal

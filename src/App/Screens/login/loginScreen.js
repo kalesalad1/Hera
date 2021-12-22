@@ -20,18 +20,20 @@ const loginScreen = ({
 
   return(     
       <View style = {{paddingTop:200}}>
+      <Text style={styles.heading1}>Welcome Back!</Text>
+
       <Text></Text>
-      <Text>Email</Text>
+      <Text style={styles.emailText}>EMAIL</Text>
           <TextInput 
               style = {styles.inputStyle}
-              placeholder = "email"
+              placeholder = "   Email"
               onChangeText = {(email) => setEmail(email)}
               value = {email}
               />
-          <Text>Password</Text>
+          <Text style={styles.passText}>PASSWORD</Text>
           <TextInput 
               style = {styles.inputStyle}
-              placeholder = "Password"
+              placeholder = "   Password"
               onChangeText = {(password) => setPassword(password)}
               value = {password}
               />
@@ -42,7 +44,7 @@ const loginScreen = ({
           }}
           style={styles.loginContainter}>
                   <Text style={styles.loginText}>
-                      Login
+                      LOGIN
                   </Text>
           </TouchableOpacity>
       
