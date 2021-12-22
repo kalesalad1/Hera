@@ -25,7 +25,7 @@ const ViewNewMedModal = ({
       onDismiss={() => setViewModalVisible(false)}
       >
         <ScrollView>
-      <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'90%', paddingTop:20, borderRadius:10}}>
+      <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'100%', paddingTop:20, paddingBottom:20, borderRadius:10}}>
       
     {selectedMedication && (
       <View>
@@ -68,11 +68,13 @@ const ViewNewMedModal = ({
           >
                   <Text style={styles.bottonText}>CANCEL</Text>
           </TouchableOpacity>
+      
       </View>
       
 
     )}
      </View>
+     <View style = {{marginBottom: 20}}></View>
      </ScrollView>
       </Modal>    
       )

@@ -6,9 +6,7 @@ const styles = StyleSheet.create({
     toolBarIcons: {
      height:'100%',
      width:'100%',
-    marginTop:'20%',
-    marginBottom:'20%'
-
+    
     },
    
 
@@ -221,6 +219,7 @@ const styles = StyleSheet.create({
         height: 116,
         left: 35,
         //top: 20,
+        marginTop:20,
         fontWeight: 'bold',
         fontSize: 40,
         lineHeight: 130,

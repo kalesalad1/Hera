@@ -70,6 +70,7 @@ const HomePage = ({
         ))}
         </View>
         )}
+        <View style = {{marginBottom:30}}></View>
         </ScrollView>
      
       <CreateNewMedModal

@@ -84,8 +84,8 @@ const CreateNewMedModal = ({
       animationType="slide"
       onDismiss={() => setCreateNewMedModalVisible(false)}
       >
-        <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'95%', paddingTop:20, borderRadius:10}}>
-        <ScrollView>
+        <View style = {{ alignItems: 'center',alignSelf:'center', backgroundColor: 'white', width: '80%', height:'90%', borderRadius:10}}>
+        <ScrollView >
             <Text style={styles.subHeading}>Medication Name</Text>
             
             <TextInput  
@@ -150,6 +150,7 @@ const CreateNewMedModal = ({
                 <Text style={styles.bottonText}>CANCEL</Text>
 
                 </TouchableOpacity>
+                <View style = {{marginBottom:50}}></View>
                 </ScrollView>
             </View>
         </Modal>    
