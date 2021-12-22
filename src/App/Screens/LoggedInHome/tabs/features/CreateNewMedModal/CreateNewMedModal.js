@@ -20,6 +20,8 @@ const CreateNewMedModal = ({
     setCreateNewMedModalVisible,
     setDays,
 }) => {
+
+  console.log({days, atTimesToTake})
   
   const validate = () => {
     createNewMed()
@@ -99,7 +101,10 @@ const CreateNewMedModal = ({
                   labelAttr="label"
                   data={displayDays} 
                   onItemPress={selection => {
-                    setDays([...days, selection.label])
+                    setDays(!days ? [selection] : (days.map(dayItem => dayItem).includes(selection.label)
+                    ? days.filter(newDay => newDay !== selection.label)
+                    : [...days, selection.label]
+                  ))
                   }}
                   containerStyle={{ paddingBottom: 0.5 }}
                 />
@@ -122,7 +127,10 @@ const CreateNewMedModal = ({
                     labelAttr="label"
                     data={displayTimes}
                     onItemPress={selection => {
-                      setNewMedTimes([...atTimesToTake, selection.label])
+                      setNewMedTimes(!atTimesToTake ? [selection] : (atTimesToTake.map(timeItem => timeItem).includes(selection.label)
+                      ? atTimesToTake.filter(newTime => newTime !== selection.label)
+                      : [...atTimesToTake, selection.label]
+                    ))
                     }}
                     containerStyle={{ paddingBottom: 15 }}
                   />
